@@ -27,7 +27,7 @@ public class UserParser {
         List<User> userList = new ArrayList<User>();
         for (String user : users) {
             User newUser = parse(user.trim());
-            userList.add(newUser);
+            if (newUser != null) userList.add(newUser);
         }
 
         return userList;
